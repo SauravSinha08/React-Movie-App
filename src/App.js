@@ -4,7 +4,7 @@ import './App.css';
 import MovieList from './Components/MovieList';
 import MovieListHeading from './Components/MovieListHeading';
 import SearchBox from './Components/SearchBox';
-import AddFavourites from './Components/AddFavourites';
+import AddFavourites from './Components/AddFavourite';
 import RemoveFavourites from './Components/RemoveFavourites';
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
 
 		const response = await fetch(url);
 		const responseJson = await response.json();
+		console.log(responseJson);
 
 		if (responseJson.Search) {
 			setMovies(responseJson.Search);
